@@ -25,6 +25,13 @@ class App extends Component {
         }
   }
 
+    removeCrime = (index) =>{
+      this.setState(
+      this.state.crimes.splice(index,1)
+      )
+    }
+    
+
     componentDidMount(){
       this.getCrimes()
       .then((data) => console.log(data, ' from famous quotes'));
@@ -34,8 +41,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Crimes</h1>
-        <CrimesList crimes={this.state.crimes}/>
+        <h1>Crimes List</h1>
+        <CrimesList crimes={this.state.crimes} removeCrime={this.removeCrime}/>
       </div>
     );
   }
