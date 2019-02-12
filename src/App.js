@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './CrimesList/crimes.css'
 import CrimesList from './CrimesList/crimes.js'
 
 class App extends Component {
@@ -42,7 +43,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Crimes List</h1>
-        <CrimesList crimes={this.state.crimes} removeCrime={this.removeCrime}/>
+        <CrimesList className='crimeslist' crimes={this.state.crimes} removeCrime={this.removeCrime}/>
       </div>
     );
   }
