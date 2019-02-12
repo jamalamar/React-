@@ -9,9 +9,9 @@ const crimesComposed= this.props.crimes.map((item, index)=>{
 
 	return (
 		<li key={index}>
-			<h5>{item.block}</h5>
-			<h5>{item.case_number}</h5>
-			<h5>{item.date}</h5>
+			<h3>{item.description}</h3>
+			<h6>Case Number: {item.case_number}</h6>
+			<h6>Date: {item.date}</h6>
 		</li>
 	)
 })
